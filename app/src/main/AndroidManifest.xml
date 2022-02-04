@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WartaJemaatApp">
         <activity
-            android:name=".ui.SplashScreenActivity"
+            android:name=".ui.ServiceScheduleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.FinancialReportActivity"
@@ -25,7 +25,7 @@
             android:name=".ui.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.ServiceScheduleActivity"
+            android:name=".ui.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
