@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnScheduleServices"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blueSecond"
+        android:padding="@dimen/distance_24"
+        android:text="@string/jadwal_pelayanan"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintEnd_toStartOf="@+id/btnSectorWorshipSchedule"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSectorWorshipSchedule"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blueSecond"
+        android:padding="@dimen/distance_24"
+        android:layout_marginStart="@dimen/distance_16"
+        android:text="@string/jadwal_nibadah_sektor"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btnScheduleServices"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnReportFinance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blueSecond"
+        android:padding="@dimen/distance_24"
+        android:layout_marginTop="@dimen/distance_16"
+        android:text="@string/laporan_nkeuangan"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintEnd_toStartOf="@+id/btnWaiterScheduleSundaySchool"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnScheduleServices" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnWaiterScheduleSundaySchool"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blueSecond"
+        android:padding="@dimen/distance_24"
+        android:layout_marginTop="@dimen/distance_16"
+        android:layout_marginStart="@dimen/distance_16"
+        android:text="@string/waiter_schedule_sunday_school"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/btnReportFinance"
+        app:layout_constraintTop_toBottomOf="@+id/btnSectorWorshipSchedule" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

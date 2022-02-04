@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textWorshipTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/distance_24"
+        android:layout_marginTop="@dimen/distance_12"
+        android:text="@string/worship"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_8"
+        android:layout_marginEnd="@dimen/distance_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textWorshipTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textWorshipTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/itemWorship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <include
+                android:id="@+id/itemLeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemWorship"/>
+
+            <include
+                android:id="@+id/itemSinger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemLeader"/>
+
+            <include
+                android:id="@+id/itemMusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemSinger"/>
+
+            <include
+                android:id="@+id/itemTamborin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemMusic"/>
+
+            <include
+                android:id="@+id/itemMixer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemTamborin"/>
+
+            <include
+                android:id="@+id/itemBanners"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemMixer"/>
+
+            <include
+                android:id="@+id/itemLCD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemBanners"/>
+
+            <include
+                android:id="@+id/itemUsher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemLCD"/>
+
+            <include
+                android:id="@+id/itemPraise"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemUsher"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

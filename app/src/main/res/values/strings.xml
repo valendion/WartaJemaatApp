@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">WartaJemaatApp</string>
+    <string name="alamat_gereja">Jl. Perintis Kemerdekaan No. 12 Makassar. \nTelp. 0411-586915</string>
+    <string name="dummy_date">Minggu, 24 September 2017</string>
+    <string name="dummy_pastor">Gembala : Pdt. Johny Sumarauw, BRE.,S.Th.,M.Th</string>
+    <string name="dummy_sector_1">Ibadah Sektor Sion</string>
+    <string name="dummy_sector_1_family">Kel. Yan Tande</string>
+    <string name="dummy_sector_1_address">BTP Blok M No. 239</string>
+    <string name="kisah_para_rasul">Kisah Para Rasul</string>
+    <string name="_10_14">10:14</string>
+    <string name="dummy_title">Kunci Keberhasilan Kornelius</string>
+    <string name="dummy_pastor_1">Oleh Pdt. Yarson ( Sulteng )</string>
+    <string name="dummy_full">Ketika kita mendengar suatu permohonan yang didengar maka pasti hati kita akan merasa senang demikian pula dengan Kornelius dan keluarganya yang merasa senang ketika malaikat Tuhan berkata bahwa semua doamu telah dide....\n
+    Ketika kita mendengar suatu permohonan yang didengar maka pasti hati kita akan merasa senang demikian pula dengan Kornelius dan keluarganya yang merasa senang ketika malaikat Tuhan berkata bahwa semua doamu telah dide....\n
+    Ketika kita mendengar suatu permohonan yang didengar maka pasti hati kita akan merasa senang demikian pula dengan Kornelius dan keluarganya yang merasa senang ketika malaikat Tuhan berkata bahwa semua doamu telah dide....\n
+    Ketika kita mendengar suatu permohonan yang didengar maka pasti hati kita akan merasa senang demikian pula dengan Kornelius dan keluarganya yang merasa senang ketika malaikat Tuhan berkata bahwa semua doamu telah dide....</string>
+    <string name="dummy_text_church_treasury">Kas Jemaat 2017</string>
+    <string name="worship">Ibadah</string>
+    <string name="ibadah_minggu_pagi">Ibadah Minggu Pagi</string>
+    <string name="ibadah_minggu_malam">Ibadah Minggu Malam</string>
+    <string name="ibadah_sabtu_malam">Ibadah Sabtu Malam</string>
+    <string name="baca_selengkapnya">Baca Selengkapnya</string>
+    <string name="warta_jemaat">Warta Jemaat</string>
+    <string name="jadwal_pelayanan">Jadwal\nPelayanan</string>
+    <string name="jadwal_nibadah_sektor">Jadwal\nIbadah Sektor</string>
+    <string name="waiter_schedule_sunday_school">Jadwal Pelayan Sekolah Minggu</string>
+    <string name="laporan_nkeuangan">Laporan\nKeuangan</string>
+    <string name="thanksgiving_worship_information">Info Ibadah Syukur</string>
+    <string name="dummy_subtitle">Ibadah Syukur 1 Tahunan Wafatnya Ibu Rohani</string>
+    <string name="dummy_content_info">Jumat, 06 Oktober 2017 Pukul 19:00 WITA Di Gereja GPdI El-Shaddai Makassar</string>
+    <string name="info_tambahan">Info Tambahan</string>
+    <string name="happy_birthday">Happy Birthday</string>
+    <string name="_01_oktober_07_oktober">( 01 Oktober - 07 Oktober )</string>
+
+
+</resources>

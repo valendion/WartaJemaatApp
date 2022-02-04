@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_devotional_details.xml" value="0.24864130434782608" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_financial_report.xml" value="0.264" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_main.xml" value="0.144" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_sector_worship_schedule.xml" value="0.264" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_service_schedule.xml" value="0.264" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.12" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/body_devotional_detail.xml" value="0.4" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/headline_pastor.xml" value="0.264" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/item_birthday.xml" value="0.536" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/item_duty_church.xml" value="0.264" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/layout_additional_info.xml" value="0.4" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/layout_birthday.xml" value="0.264" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/layout_body_sector_workship_pastor.xml" value="0.25" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/layout_body_sector_workship_schedule.xml" value="0.264" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/layout_button_church_news.xml" value="0.264" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/layout_devotional.xml" value="0.4" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/layput_duty.xml" value="0.4" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/list_church_treasury.xml" value="0.176" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/list_item_financial_report.xml" value="0.4" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/lyout_additional_info.xml" value="0.2223731884057971" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/title_content.xml" value="0.25" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/toolbar_basic.xml" value="0.176" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/toolbar_basic_2.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

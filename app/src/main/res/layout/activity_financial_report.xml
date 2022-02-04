@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.FinancialReportActivity">
+
+    <include
+        android:id="@+id/toolbarFinancialReport"
+        layout="@layout/toolbar_basic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/headerFinancialReport"
+        layout="@layout/headline_pastor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarFinancialReport" />
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toBottomOf="@+id/headerFinancialReport"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<!--     Kas Jemaat       -->
+
+            <include
+                android:id="@+id/textChurchTreasury"
+                layout="@layout/title_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/listChurchTreasury"
+                layout="@layout/list_church_treasury"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintTop_toBottomOf="@+id/textChurchTreasury" />
+
+<!--     Pembangunan Gereja       -->
+
+            <include
+                android:id="@+id/textChurchBuilding"
+                layout="@layout/title_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/listChurchTreasury" />
+
+            <include
+                android:id="@+id/listChurchBuilding"
+                layout="@layout/list_church_treasury"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintTop_toBottomOf="@+id/textChurchBuilding" />
+
+
+<!--    Bidang Sarana dan Pra Sarana        -->
+
+            <include
+                android:id="@+id/textChurchFacilities"
+                layout="@layout/title_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/listChurchBuilding" />
+
+            <include
+                android:id="@+id/listChurchFacilities"
+                layout="@layout/list_church_treasury"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:layout_constraintTop_toBottomOf="@+id/textChurchFacilities" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

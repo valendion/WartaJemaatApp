@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/distance_16">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textDevotional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Renungan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeNormal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hari ini : "
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeNormal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textDevotional" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textNameChapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kisah_para_rasul"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeNormal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textNumberChapter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_10_14"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeNormal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textDevotional" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/dummy_title"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSizeHeader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textNumberChapter" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textPastor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_pastor_1"
+                app:layout_constraintEnd_toEndOf="@id/textTitle"
+                app:layout_constraintStart_toStartOf="@id/textTitle"
+                app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textBibleContent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/distance_8"
+                android:text="@string/dummy_full"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textPastor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
