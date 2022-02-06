@@ -33,4 +33,5 @@
     <string name="_01_oktober_07_oktober">( 01 Oktober - 07 Oktober )</string>
 
 
+    <string name="birthdy_item">%1$d. %2$s</string>
 </resources>
