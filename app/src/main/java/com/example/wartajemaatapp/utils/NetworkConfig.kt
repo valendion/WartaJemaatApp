@@ -2,9 +2,9 @@ package com.example.wartajemaatapp.utils
 
 
 import com.example.wartajemaatapp.BuildConfig
-import com.example.wartajemaatapp.model.ApiServiceFinancialStatements
-import com.example.wartajemaatapp.model.ApiServiceMain
-import com.example.wartajemaatapp.model.ApiServiceSector
+import com.example.wartajemaatapp.model.network.ApiServiceFinancialStatements
+import com.example.wartajemaatapp.model.network.ApiServiceMain
+import com.example.wartajemaatapp.model.network.ApiServiceSector
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient

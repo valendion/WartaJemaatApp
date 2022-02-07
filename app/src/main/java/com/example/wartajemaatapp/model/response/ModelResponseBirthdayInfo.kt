@@ -1,10 +1,10 @@
-package com.example.wartajemaatapp.model
+package com.example.wartajemaatapp.model.response
 
 import com.google.gson.annotations.SerializedName
 
 data class ModelResponseBirthdayInfo(
     @SerializedName("data")
-    var data: MutableList<ModelBirthday?>,
+    var data: MutableList<ModelResponseBirthdayData?>,
 
     @SerializedName("status")
     var status: String? = "",

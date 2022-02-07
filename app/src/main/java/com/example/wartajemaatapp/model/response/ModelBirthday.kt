@@ -1,4 +1,4 @@
-package com.example.wartajemaatapp.model
+package com.example.wartajemaatapp.model.response
 
 import com.google.gson.annotations.SerializedName
 

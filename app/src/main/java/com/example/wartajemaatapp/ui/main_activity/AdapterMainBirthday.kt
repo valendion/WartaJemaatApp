@@ -1,12 +1,13 @@
 package com.example.wartajemaatapp.ui.main_activity
 
-import android.annotation.SuppressLint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wartajemaatapp.R
 import com.example.wartajemaatapp.databinding.ItemBirthdayBinding
-import com.example.wartajemaatapp.model.ModelBirthday
+import com.example.wartajemaatapp.model.response.ModelBirthday
+import com.example.wartajemaatapp.utils.FormatDate
 
 class AdapterMainBirthday: RecyclerView.Adapter<AdapterMainBirthday.BirthdayHolder>(){
 
@@ -33,7 +34,11 @@ class AdapterMainBirthday: RecyclerView.Adapter<AdapterMainBirthday.BirthdayHold
                     textName.text = itemBinding.root.resources.getString(R.string.birthdy_item, position,modelBirthday.nama)
                 }
                 if (modelBirthday != null) {
-                    textBirthday.text = modelBirthday.tanggal
+                    textBirthday.text = modelBirthday.tanggal?.let {
+                        FormatDate.changeFormatIndonesianDate(
+                            it
+                        )
+                    }
                 }
             }
         }

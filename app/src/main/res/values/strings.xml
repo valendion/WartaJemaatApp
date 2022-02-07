@@ -31,7 +31,12 @@
     <string name="info_tambahan">Info Tambahan</string>
     <string name="happy_birthday">Happy Birthday</string>
     <string name="_01_oktober_07_oktober">( 01 Oktober - 07 Oktober )</string>
+    <string name="dummy_week">( %1$s - %2$s )</string>
 
 
     <string name="birthdy_item">%1$d. %2$s</string>
+    <string name="when_where_thanks_giving">%1$s, %2$s Pukul %3$s WITA di %4$s</string>
+    <string name="formaat_date_indonesia">dd-MM-yyyy</string>
+
+
 </resources>
