@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/textSector1"
+        android:id="@+id/textSector"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/distance_24"
@@ -22,8 +22,8 @@
         android:layout_marginTop="@dimen/distance_8"
         android:layout_marginEnd="@dimen/distance_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textSector1"
-        app:layout_constraintTop_toBottomOf="@+id/textSector1">
+        app:layout_constraintStart_toStartOf="@+id/textSector"
+        app:layout_constraintTop_toBottomOf="@+id/textSector">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:padding="@dimen/distance_12"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/sector1Left"
-                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintHorizontal_weight="1.2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -47,7 +47,7 @@
                     android:id="@+id/textDay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Selasa, 3"
+                    android:text="Selasa,"
                     android:textColor="@color/white"
                     android:textSize="@dimen/textSizeNormal" />
 
@@ -55,7 +55,7 @@
                     android:id="@+id/textYear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Oktober 2022"
+                    android:text="3 Oktober 2022"
                     android:textColor="@color/white"
                     android:textSize="@dimen/textSizeNormal" />
 

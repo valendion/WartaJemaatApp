@@ -9,7 +9,7 @@ import com.example.wartajemaatapp.R
 import com.example.wartajemaatapp.databinding.ActivityMainBinding
 import com.example.wartajemaatapp.ui.devotional_detail_activity.DevotionalDetailsActivity
 import com.example.wartajemaatapp.ui.FinancialReportActivity
-import com.example.wartajemaatapp.ui.SectorWorshipScheduleActivity
+import com.example.wartajemaatapp.ui.sector_worship_schedule_activity.SectorWorshipScheduleActivity
 import com.example.wartajemaatapp.ui.service_schedule_activity.ServiceScheduleActivity
 import com.example.wartajemaatapp.utils.FormatDate
 import com.example.wartajemaatapp.utils.GetCurrentDate

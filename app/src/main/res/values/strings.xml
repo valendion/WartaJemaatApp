@@ -40,7 +40,9 @@
     <string name="when_where_thanks_giving">%1$s, %2$s Pukul %3$s WITA di %4$s</string>
     <string name="current_date">%1$s, %2$s</string>
     <string name="text_bible">%1$s \n %2$s</string>
+    <string name="wita">%1$s WITA</string>
     <string name="formaat_date_indonesia">dd-MM-yyyy</string>
+    <string name="formaat_date_internasional">yyyy-MM-dd</string>
 
     <string name="Leader">Leader</string>
     <string name="Singer">Singer</string>
@@ -51,6 +53,10 @@
     <string name="LCD">LCD</string>
     <string name="Usher">Usher</string>
     <string name="Pujian">Pujian</string>
+
+    <string name="ibadah_torsina">Ibadah Sektor Torsina</string>
+    <string name="ibadah_pisga">Ibadah Sektor Pisga</string>
+    <string name="ibadah_hermon">Ibadah Sektor Hermon</string>
 
 
 

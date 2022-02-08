@@ -14,6 +14,8 @@ class FinancialReportActivity : AppCompatActivity() {
         binding = ActivityFinancialReportBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+
         binding.apply {
             headerFinancialReport.textInfo.text
         }
