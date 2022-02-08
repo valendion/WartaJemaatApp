@@ -42,5 +42,16 @@
     <string name="text_bible">%1$s \n %2$s</string>
     <string name="formaat_date_indonesia">dd-MM-yyyy</string>
 
+    <string name="Leader">Leader</string>
+    <string name="Singer">Singer</string>
+    <string name="Music">Music</string>
+    <string name="Tamborin">Tamborin</string>
+    <string name="Mixer">Mixer</string>
+    <string name="Banners">Banners</string>
+    <string name="LCD">LCD</string>
+    <string name="Usher">Usher</string>
+    <string name="Pujian">Pujian</string>
+
+
 
 </resources>

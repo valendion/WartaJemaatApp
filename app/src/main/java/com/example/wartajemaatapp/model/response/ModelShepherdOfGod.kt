@@ -10,5 +10,5 @@ data class ModelShepherdOfGod(
     var nama: String? = "",
 
     @SerializedName("asal")
-    var asal: String? = "",
+    var asal: String? = ""
 )

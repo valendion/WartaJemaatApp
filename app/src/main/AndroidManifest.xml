@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WartaJemaatApp">
         <activity
-            android:name=".ui.ServiceScheduleActivity"
+            android:name=".ui.service_schedule_activity.ServiceScheduleActivity"
             android:exported="false" />
         <activity
             android:name=".ui.FinancialReportActivity"

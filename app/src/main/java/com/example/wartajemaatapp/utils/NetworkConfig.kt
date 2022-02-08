@@ -5,6 +5,7 @@ import com.example.wartajemaatapp.BuildConfig
 import com.example.wartajemaatapp.model.network.ApiServiceFinancialStatements
 import com.example.wartajemaatapp.model.network.ApiServiceMain
 import com.example.wartajemaatapp.model.network.ApiServiceSector
+import com.example.wartajemaatapp.model.network.ApiServiceWeeklyWorship
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -38,5 +39,9 @@ object NetworkConfig {
 
     val apiServiceMain: ApiServiceMain by lazy {
         retrofit.create(ApiServiceMain::class.java)
+    }
+
+    val apiServiceWorship: ApiServiceWeeklyWorship by lazy {
+        retrofit.create(ApiServiceWeeklyWorship::class.java)
     }
 }

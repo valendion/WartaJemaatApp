@@ -11,5 +11,5 @@ data class ModelThanksGiving(
 
     @SerializedName("waktu") var waktu: String? = "",
 
-    @SerializedName("alamat") var alamat: String? = "",
+    @SerializedName("alamat") var alamat: String? = ""
 )

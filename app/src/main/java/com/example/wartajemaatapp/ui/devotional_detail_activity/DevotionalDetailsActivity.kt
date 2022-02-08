@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.wartajemaatapp.R
 import com.example.wartajemaatapp.databinding.ActivityDevotionalDetailsBinding
-import com.example.wartajemaatapp.databinding.ActivityMainBinding
 import com.example.wartajemaatapp.ui.main_activity.MainActivity
 import com.example.wartajemaatapp.utils.FormatDate
 import com.example.wartajemaatapp.utils.SharePreference
@@ -42,7 +41,7 @@ class DevotionalDetailsActivity : AppCompatActivity() {
 
     }
 
-    fun backArrow(){
+    private fun backArrow(){
         startActivity(Intent(this, MainActivity::class.java))
         finishAffinity()
     }
@@ -79,7 +78,6 @@ class DevotionalDetailsActivity : AppCompatActivity() {
             textDate.text = date
             backArrow.setOnClickListener { backArrow() }
         }
-
     }
 
     private fun initViewDetail(){
