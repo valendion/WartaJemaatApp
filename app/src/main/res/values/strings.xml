@@ -35,7 +35,10 @@
 
 
     <string name="birthdy_item">%1$d. %2$s</string>
+    <string name="by_shepher">Oleh %1$s</string>
+    <string name="shepherd">Gembala : %1$s</string>
     <string name="when_where_thanks_giving">%1$s, %2$s Pukul %3$s WITA di %4$s</string>
+    <string name="current_date">%1$s, %2$s</string>
     <string name="formaat_date_indonesia">dd-MM-yyyy</string>
 
 

@@ -2,9 +2,9 @@ package com.example.wartajemaatapp.model.response
 
 import com.google.gson.annotations.SerializedName
 
-data class ModelResponseShepherdOfGod(
+data class ModelResponseReflection(
     @SerializedName("data")
-    var data: ModelShepherdOfGod?,
+    var data: ModelReflection?,
 
     @SerializedName("status")
     var status: String? = "",

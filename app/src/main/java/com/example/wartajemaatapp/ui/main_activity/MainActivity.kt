@@ -7,12 +7,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wartajemaatapp.R
 import com.example.wartajemaatapp.databinding.ActivityMainBinding
-import com.example.wartajemaatapp.ui.DevotionalDetailsActivity
 import com.example.wartajemaatapp.ui.FinancialReportActivity
 import com.example.wartajemaatapp.ui.SectorWorshipScheduleActivity
 import com.example.wartajemaatapp.ui.ServiceScheduleActivity
 import com.example.wartajemaatapp.utils.FormatDate
+import com.example.wartajemaatapp.utils.GetCurrentDate
 import com.example.wartajemaatapp.utils.NetworkConfig
+import com.example.wartajemaatapp.utils.SharePreference
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -21,17 +22,94 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private var adapterBirthday = AdapterMainBirthday()
+    lateinit var pref: SharePreference
+    lateinit var nameShepherd: String
+    lateinit var originShepherd: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        pref = SharePreference(this)
 
         initRecylerviewBirthday()
-        initView()
+
+        initViewBirthday()
+
+        initViewThanksGiving()
+
+        getshSpherd()
 
         navigationButton()
+
+        getCurrentDate()
+
+        showReflection()
+    }
+
+    private fun showReflection(){
+        CoroutineScope(Dispatchers.IO).launch {
+            //List Birthday
+            val dataReflection = NetworkConfig.apiServiceMain.getReflection()
+
+            CoroutineScope(Dispatchers.Main).launch {
+                dataReflection.data.let {
+                    binding.bodyDevotional.apply {
+                        textNumberChapter.text = it?.ayat ?: ""
+                        textTitle.text = it?.judul ?: ""
+                        textBibleContent.text = it?.deskripsi_1 ?: ""
+                        textPastor.text = resources.getString(R.string.by_shepher,it?.pengarang)
+                    }
+                }
+
+            }
+        }
+    }
+
+    private fun getCurrentDate() {
+
+        pref.apply {
+            save(PREFS_DATE, GetCurrentDate.getDate())
+
+            binding.toolbarMain.apply {
+                val dateCurrent = getValueString(PREFS_DATE)
+                textCurrentDate.text = resources.getString(
+                    R.string.current_date,
+                    dateCurrent?.let { FormatDate.getDayInDate(it, "dd MMMM yyyy") },
+                    dateCurrent
+                )
+            }
+        }
+    }
+
+    private fun getshSpherd() {
+        CoroutineScope(Dispatchers.IO).launch {
+            //List Birthday
+            val datShepherd = NetworkConfig.apiServiceMain.getShepherd()
+
+            datShepherd.data?.apply {
+                this.nama?.let {
+                    nameShepherd = it
+                }
+
+                this.asal?.let {
+                    originShepherd = it
+                }
+            }
+
+            pref.apply {
+                save(PREFS_NAME, nameShepherd)
+//                save( PREFS_ORIGIN, originShepherd)
+
+                CoroutineScope(Dispatchers.Main).launch {
+                    binding.headerMain.apply {
+                        textInfo.text =
+                            resources.getString(R.string.shepherd, getValueString(PREFS_NAME))
+                    }
+                }
+            }
+        }
     }
 
     private fun navigationButton() {
@@ -78,13 +156,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     @SuppressLint("SetTextI18n")
-    private fun initView() {
+    private fun initViewBirthday() {
         CoroutineScope(Dispatchers.IO).launch {
             //List Birthday
             val dataBirthday = NetworkConfig.apiServiceMain.getBirthday()
-
-            //Thanks Giving
-            val dataThanksGiving = NetworkConfig.apiServiceMain.getThanksGiving()
 
             CoroutineScope(Dispatchers.Main).launch {
                 dataBirthday.data[0]?.let {
@@ -99,6 +174,19 @@ class MainActivity : AppCompatActivity() {
                     adapterBirthday.updateDataBirthday(it.birthdayData)
                 }
 
+            }
+        }
+
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun initViewThanksGiving() {
+        CoroutineScope(Dispatchers.IO).launch {
+            //Thanks Giving
+            val dataThanksGiving = NetworkConfig.apiServiceMain.getThanksGiving()
+
+            CoroutineScope(Dispatchers.Main).launch {
+
                 binding.bodyInfo.apply {
 
                     dataThanksGiving.data?.get(0)?.apply {
@@ -109,7 +197,7 @@ class MainActivity : AppCompatActivity() {
                                 textContentInfo.text =
                                     resources.getString(
                                         R.string.when_where_thanks_giving,
-                                        getDayInDate(it, binding.root.context),
+                                        getDayInDate(it, "dd-MM-yyyy"),
                                         changeFormatStringDate(it),
                                         waktu?.let { it1 -> changeFormatTime(it1) },
                                         alamat
@@ -128,5 +216,10 @@ class MainActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(binding.root.context)
             adapter = adapterBirthday
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        pref.clearSharedPreference()
     }
 }

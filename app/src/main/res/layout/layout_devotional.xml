@@ -7,8 +7,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:padding="@dimen/distance_16"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="@dimen/distance_16">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textDevotional"
@@ -31,22 +31,13 @@
             app:layout_constraintTop_toBottomOf="@+id/textDevotional" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textNameChapter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/kisah_para_rasul"
-            android:textColor="@color/white"
-            android:textSize="@dimen/textSizeNormal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/textNumberChapter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_10_14"
             android:textColor="@color/white"
             android:textSize="@dimen/textSizeNormal"
+            app:layout_constraintBottom_toBottomOf="@+id/textToday"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textDevotional" />
 
@@ -55,6 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="@dimen/distance_16"
             android:text="@string/dummy_title"
             android:textColor="@color/white"
             android:textSize="@dimen/textSizeHeader"
@@ -66,8 +58,8 @@
             android:id="@+id/textPastor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
             android:text="@string/dummy_pastor_1"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@id/textTitle"
             app:layout_constraintStart_toStartOf="@id/textTitle"
             app:layout_constraintTop_toBottomOf="@+id/textTitle" />
@@ -76,9 +68,10 @@
             android:id="@+id/textBibleContent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/distance_8"
-            android:text="@string/dummy_full"
+            android:layout_marginTop="@dimen/distance_16"
+            android:ellipsize="end"
             android:maxLines="5"
+            android:text="@string/dummy_full"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -87,12 +80,12 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/textBibleContent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="@dimen/distance_16"
             android:text="@string/baca_selengkapnya"
-            android:textSize="@dimen/textSizeSmall"/>
+            android:textSize="@dimen/textSizeSmall"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textBibleContent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
