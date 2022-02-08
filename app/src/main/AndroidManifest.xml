@@ -18,7 +18,7 @@
             android:name=".ui.FinancialReportActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.DevotionalDetailsActivity"
+            android:name=".ui.devotional_detail_activity.DevotionalDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".ui.SectorWorshipScheduleActivity"

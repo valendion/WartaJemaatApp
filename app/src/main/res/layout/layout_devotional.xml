@@ -78,6 +78,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textPastor" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/distance_16"

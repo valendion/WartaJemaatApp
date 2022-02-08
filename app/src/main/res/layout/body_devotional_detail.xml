@@ -34,22 +34,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/textDevotional" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/textNameChapter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/kisah_para_rasul"
-                android:textColor="@color/black"
-                android:textSize="@dimen/textSizeNormal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textNumberChapter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_10_14"
                 android:textColor="@color/black"
                 android:textSize="@dimen/textSizeNormal"
+                app:layout_constraintBottom_toBottomOf="@+id/textToday"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textDevotional" />
 
@@ -58,6 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:layout_marginTop="@dimen/distance_16"
                 android:text="@string/dummy_title"
                 android:textColor="@color/black"
                 android:textSize="@dimen/textSizeHeader"
@@ -69,6 +61,7 @@
                 android:id="@+id/textPastor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:text="@string/dummy_pastor_1"
                 app:layout_constraintEnd_toEndOf="@id/textTitle"
                 app:layout_constraintStart_toStartOf="@id/textTitle"
@@ -78,7 +71,8 @@
                 android:id="@+id/textBibleContent"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/distance_8"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/distance_16"
                 android:text="@string/dummy_full"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

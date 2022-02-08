@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wartajemaatapp.R
 import com.example.wartajemaatapp.databinding.ActivityMainBinding
+import com.example.wartajemaatapp.ui.devotional_detail_activity.DevotionalDetailsActivity
 import com.example.wartajemaatapp.ui.FinancialReportActivity
 import com.example.wartajemaatapp.ui.SectorWorshipScheduleActivity
 import com.example.wartajemaatapp.ui.ServiceScheduleActivity
@@ -60,9 +61,17 @@ class MainActivity : AppCompatActivity() {
                         textTitle.text = it?.judul ?: ""
                         textBibleContent.text = it?.deskripsi_1 ?: ""
                         textPastor.text = resources.getString(R.string.by_shepher,it?.pengarang)
+
+                        btnNext.setOnClickListener {view ->
+                            startActivity(Intent(this@MainActivity, DevotionalDetailsActivity::class.java)
+                                .putExtra("ayat", it?.ayat)
+                                .putExtra("judul", it?.judul)
+                                .putExtra("deskripsi_1", it?.deskripsi_1)
+                                .putExtra("deskripsi_2", it?.deskripsi_2)
+                                .putExtra("pengarang", it?.pengarang))
+                        }
                     }
                 }
-
             }
         }
     }
