@@ -51,14 +51,6 @@
             android:textColor="@color/black"
             android:textSize="@dimen/textSizeNormal" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textAddess"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/dummy_sector_1_address"
-            android:textColor="@color/black"
-            android:textSize="@dimen/textSizeNormal" />
-
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 

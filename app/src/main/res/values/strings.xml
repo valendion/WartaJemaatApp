@@ -54,10 +54,15 @@
     <string name="Usher">Usher</string>
     <string name="Pujian">Pujian</string>
 
+    <string name="service_suanday_school">Pelyanan Sekolah Minggu</string>
+
     <string name="ibadah_torsina">Ibadah Sektor Torsina</string>
     <string name="ibadah_pisga">Ibadah Sektor Pisga</string>
     <string name="ibadah_hermon">Ibadah Sektor Hermon</string>
 
-
+    <string name="team">Team</string>
+    <string name="kelas_beaar">Cerita FA Kelas Besar</string>
+    <string name="kelas_kecil">Cerita FA Kelas Kecil</string>
+    <string name="service">Pujian/Musik</string>
 
 </resources>

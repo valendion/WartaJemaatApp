@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textWorshipTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_12"
+        android:text="@string/worship"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textWorshipSubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_12"
+        android:text="@string/dummy_date"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWorshipTitle" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_16"
+        android:layout_marginEnd="@dimen/distance_24"
+        android:layout_marginStart="@dimen/distance_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWorshipSubTitle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/itemTeam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <include
+                android:id="@+id/itemBesar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemTeam"/>
+
+            <include
+                android:id="@+id/itemKecil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemBesar"/>
+
+            <include
+                android:id="@+id/itemMusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemKecil"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
