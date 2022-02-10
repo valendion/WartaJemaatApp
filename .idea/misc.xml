@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_devotional_details.xml" value="0.24864130434782608" />
-        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_financial_report.xml" value="0.264" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_financial_report.xml" value="0.152" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_sector_worship_schedule.xml" value="0.264" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_service_schedule.xml" value="0.264" />
@@ -24,6 +24,8 @@
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/layput_duty.xml" value="0.4" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/list_church_treasury.xml" value="0.176" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/list_item_financial_report.xml" value="0.4" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/list_item_financial_report_2.xml" value="0.1875" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/list_item_financial_report_3.xml" value="0.1875" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/lyout_additional_info.xml" value="0.2223731884057971" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/title_content.xml" value="0.25" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/toolbar_basic.xml" value="0.176" />

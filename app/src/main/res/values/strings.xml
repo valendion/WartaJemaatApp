@@ -14,7 +14,7 @@
     Ketika kita mendengar suatu permohonan yang didengar maka pasti hati kita akan merasa senang demikian pula dengan Kornelius dan keluarganya yang merasa senang ketika malaikat Tuhan berkata bahwa semua doamu telah dide....\n
     Ketika kita mendengar suatu permohonan yang didengar maka pasti hati kita akan merasa senang demikian pula dengan Kornelius dan keluarganya yang merasa senang ketika malaikat Tuhan berkata bahwa semua doamu telah dide....\n
     Ketika kita mendengar suatu permohonan yang didengar maka pasti hati kita akan merasa senang demikian pula dengan Kornelius dan keluarganya yang merasa senang ketika malaikat Tuhan berkata bahwa semua doamu telah dide....</string>
-    <string name="dummy_text_church_treasury">Kas Jemaat 2017</string>
+    <string name="dummy_text_church_treasury">Kas Jemaat 2022</string>
     <string name="worship">Ibadah</string>
     <string name="ibadah_minggu_pagi">Ibadah Minggu Pagi</string>
     <string name="ibadah_minggu_malam">Ibadah Minggu Malam</string>
@@ -64,5 +64,10 @@
     <string name="kelas_beaar">Cerita FA Kelas Besar</string>
     <string name="kelas_kecil">Cerita FA Kelas Kecil</string>
     <string name="service">Pujian/Musik</string>
+
+    <string name="masuk">Masuk: Rp. %1$s</string>
+    <string name="keluar">Keluar: Rp. %1$s</string>
+    <string name="saldo">Saldo: Rp. %1$s</string>
+    <string name="ket">Ket: %1$s</string>
 
 </resources>

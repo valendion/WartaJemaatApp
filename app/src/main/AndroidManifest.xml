@@ -18,7 +18,7 @@
             android:name=".ui.service_schedule_activity.ServiceScheduleActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.FinancialReportActivity"
+            android:name=".ui.financial_report_activity.FinancialReportActivity"
             android:exported="false" />
         <activity
             android:name=".ui.devotional_detail_activity.DevotionalDetailsActivity"
