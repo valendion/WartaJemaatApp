@@ -21,9 +21,9 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbarFinancialReport" />
 
     <androidx.core.widget.NestedScrollView
-        app:layout_constraintTop_toBottomOf="@+id/headerFinancialReport"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/headerFinancialReport">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -63,39 +63,85 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/listChurchTreasuryQuit" />
 
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupChurchTreasury"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="listChurchTreasuryEnter,listChurchTreasuryQuit,listChurchTreasuryResult" />
 
             <!--     Pembangunan Gereja       -->
 
-            <!--            <include-->
-            <!--                android:id="@+id/textChurchBuilding"-->
-            <!--                layout="@layout/title_content"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/listChurchTreasuryEnter" />-->
+            <include
+                android:id="@+id/textChurchBuilding"
+                layout="@layout/title_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/listChurchTreasuryResult" />
 
-            <!--            <include-->
-            <!--                android:id="@+id/listChurchBuilding"-->
-            <!--                layout="@layout/list_church_treasury"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="250dp"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/textChurchBuilding" />-->
+            <include
+                android:id="@+id/listChurchBuildingEnter"
+                layout="@layout/list_church_treasury"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/listChurchBuildingQuit"
+                app:layout_constraintTop_toBottomOf="@+id/textChurchBuilding" />
+
+            <include
+                android:id="@+id/listChurchBuildingQuit"
+                layout="@layout/list_church_treasury"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/listChurchBuildingResult"
+                app:layout_constraintTop_toBottomOf="@+id/listChurchBuildingEnter" />
+
+            <include
+                android:id="@+id/listChurchBuildingResult"
+                layout="@layout/list_church_treasury"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/listChurchBuildingQuit" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupChurchBuilding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="listChurchBuildingEnter,listChurchBuildingQuit,listChurchBuildingResult" />
 
 
             <!--    Bidang Sarana dan Pra Sarana        -->
 
-            <!--            <include-->
-            <!--                android:id="@+id/textChurchFacilities"-->
-            <!--                layout="@layout/title_content"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/listChurchBuilding" />-->
+            <include
+                android:id="@+id/textChurchFacilities"
+                layout="@layout/title_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/listChurchBuildingResult" />
 
-            <!--            <include-->
-            <!--                android:id="@+id/listChurchFacilities"-->
-            <!--                layout="@layout/list_church_treasury"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="250dp"-->
-            <!--                app:layout_constraintTop_toBottomOf="@+id/textChurchFacilities" />-->
+            <include
+                android:id="@+id/listChurchFacilitiesEnter"
+                layout="@layout/list_church_treasury"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/listChurchFacilitiesQuit"
+                app:layout_constraintTop_toBottomOf="@+id/textChurchFacilities" />
+
+            <include
+                android:id="@+id/listChurchFacilitiesQuit"
+                layout="@layout/list_church_treasury"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/listChurchFacilitiesResult"
+                app:layout_constraintTop_toBottomOf="@+id/listChurchFacilitiesEnter" />
+
+            <include
+                android:id="@+id/listChurchFacilitiesResult"
+                layout="@layout/list_church_treasury"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/listChurchBuildingQuit"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
