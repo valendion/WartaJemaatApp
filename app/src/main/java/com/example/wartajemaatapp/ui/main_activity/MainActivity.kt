@@ -35,10 +35,13 @@ class MainActivity : AppCompatActivity() {
 
         pref = SharePreference(this)
 
+        //Memanggil tampilan list birthday
         initRecylerviewBirthday()
 
+        //Memanggil data birthday
         initViewBirthday()
 
+        //Memanggil tampilan ibadah
         initViewThanksGiving()
 
         getshSpherd()

@@ -8,6 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bluePrimary">#344986</color>
+    <color name="blueDark">#112459</color>
     <color name="blueLight">#4EC9DF</color>
     <color name="blueLightDark">#63A1D0</color>
     <color name="blueSecond">#3576A7</color>

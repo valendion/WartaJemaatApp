@@ -99,6 +99,13 @@
                 layout="@layout/item_duty_church"
                 app:layout_constraintTop_toBottomOf="@+id/itemUsher"/>
 
+            <include
+                android:id="@+id/itemPark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_duty_church"
+                app:layout_constraintTop_toBottomOf="@+id/itemPraise"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>

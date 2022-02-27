@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.199609375" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/drawable/ic_back_arrow.xml" value="0.199609375" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/drawable/ic_calendar.xml" value="0.199609375" />
+        <entry key="..\:/file/WartaJemaatApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.199609375" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_devotional_details.xml" value="0.24864130434782608" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_financial_report.xml" value="0.152" />
         <entry key="..\:/file/WartaJemaatApp/app/src/main/res/layout/activity_main.xml" value="0.2" />

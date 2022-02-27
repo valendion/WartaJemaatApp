@@ -53,6 +53,7 @@
     <string name="LCD">LCD</string>
     <string name="Usher">Usher</string>
     <string name="Pujian">Pujian</string>
+    <string name="Park">Parkir</string>
 
     <string name="service_suanday_school">Pelyanan Sekolah Minggu</string>
     <string name="building_church">Pembangunan Gereja</string>

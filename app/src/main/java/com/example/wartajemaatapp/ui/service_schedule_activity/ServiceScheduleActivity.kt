@@ -94,6 +94,7 @@ class ServiceScheduleActivity : AppCompatActivity() {
                         itemLCD.textFamily.text = lcd
                         itemUsher.textFamily.text = usher
                         itemPraise.textFamily.text = pujian
+                        itemPark.textFamily.text = parkir
                     }
                 }
             }
@@ -120,6 +121,7 @@ class ServiceScheduleActivity : AppCompatActivity() {
                         itemLCD.textFamily.text = lcd
                         itemUsher.textFamily.text = usher
                         itemPraise.textFamily.text = pujian
+                        itemPark.textFamily.text = parkir
                     }
                 }
             }
@@ -146,6 +148,7 @@ class ServiceScheduleActivity : AppCompatActivity() {
                         itemLCD.textFamily.text = lcd
                         itemUsher.textFamily.text = usher
                         itemPraise.textFamily.text = pujian
+                        itemPark.textFamily.text = parkir
                     }
                 }
             }
@@ -165,6 +168,7 @@ class ServiceScheduleActivity : AppCompatActivity() {
                 itemLCD.textDay.text = resources.getString(R.string.LCD)
                 itemUsher.textDay.text = resources.getString(R.string.Usher)
                 itemPraise.textDay.text = resources.getString(R.string.Pujian)
+                itemPark.textDay.text = resources.getString(R.string.Park)
 
                 ColorScheduleService.changeTitle(
                     textWorshipTitle,
@@ -183,6 +187,7 @@ class ServiceScheduleActivity : AppCompatActivity() {
                     itemLCD.sectorLeft,
                     itemUsher.sectorLeft,
                     itemPraise.sectorLeft,
+                    itemPark.sectorLeft
                 )
             }
 
@@ -197,6 +202,7 @@ class ServiceScheduleActivity : AppCompatActivity() {
                 itemLCD.textDay.text = resources.getString(R.string.LCD)
                 itemUsher.textDay.text = resources.getString(R.string.Usher)
                 itemPraise.textDay.text = resources.getString(R.string.Pujian)
+                itemPark.textDay.text = resources.getString(R.string.Park)
 
                 ColorScheduleService.changeTitle(
                     textWorshipTitle,
@@ -215,6 +221,7 @@ class ServiceScheduleActivity : AppCompatActivity() {
                     itemLCD.sectorLeft,
                     itemUsher.sectorLeft,
                     itemPraise.sectorLeft,
+                    itemPark.sectorLeft
                 )
             }
 
@@ -229,6 +236,7 @@ class ServiceScheduleActivity : AppCompatActivity() {
                 itemLCD.textDay.text = resources.getString(R.string.LCD)
                 itemUsher.textDay.text = resources.getString(R.string.Usher)
                 itemPraise.textDay.text = resources.getString(R.string.Pujian)
+                itemPark.textDay.text = resources.getString(R.string.Park)
 
                 ColorScheduleService.changeTitle(
                     textWorshipTitle,
@@ -247,6 +255,7 @@ class ServiceScheduleActivity : AppCompatActivity() {
                     itemLCD.sectorLeft,
                     itemUsher.sectorLeft,
                     itemPraise.sectorLeft,
+                    itemPark.sectorLeft
                 )
             }
 

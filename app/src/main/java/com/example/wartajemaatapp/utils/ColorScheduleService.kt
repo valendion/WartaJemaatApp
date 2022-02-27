@@ -21,7 +21,8 @@ object ColorScheduleService {
         Banners: LinearLayoutCompat,
         LCD: LinearLayoutCompat,
         Usher: LinearLayoutCompat,
-        Pujian: LinearLayoutCompat
+        Pujian: LinearLayoutCompat,
+        Parkir: LinearLayoutCompat
     ) {
         worship.setBackgroundColor(ContextCompat.getColor(context, R.color.bluePrimary))
         Leader.setBackgroundColor(ContextCompat.getColor(context, R.color.ancient))
@@ -33,6 +34,7 @@ object ColorScheduleService {
         LCD.setBackgroundColor(ContextCompat.getColor(context, R.color.darkGreen))
         Usher.setBackgroundColor(ContextCompat.getColor(context, R.color.darkBlue))
         Pujian.setBackgroundColor(ContextCompat.getColor(context, R.color.black))
+        Parkir.setBackgroundColor(ContextCompat.getColor(context, R.color.blueDark))
     }
 
     fun changeDuty(

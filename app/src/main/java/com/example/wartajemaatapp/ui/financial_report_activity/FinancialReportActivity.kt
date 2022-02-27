@@ -53,6 +53,7 @@ class FinancialReportActivity : AppCompatActivity() {
         getDateandName()
         initPastor()
         initDate()
+
         initRecylerviewCash()
         initViewChurchEnter()
         initViewChurchQuit()
