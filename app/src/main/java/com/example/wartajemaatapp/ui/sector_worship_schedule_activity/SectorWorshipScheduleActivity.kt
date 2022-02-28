@@ -2,6 +2,7 @@ package com.example.wartajemaatapp.ui.sector_worship_schedule_activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wartajemaatapp.R
 import com.example.wartajemaatapp.databinding.ActivitySectorWorshipScheduleBinding
@@ -74,7 +75,7 @@ class SectorWorshipScheduleActivity : AppCompatActivity() {
         }
     }
 
-    private fun initTitle(){
+    private fun initTitle() {
         binding.bodyScheduleSector2.textSector.text = resources.getString(R.string.ibadah_torsina)
         binding.bodyScheduleSector3.textSector.text = resources.getString(R.string.ibadah_pisga)
         binding.bodyScheduleSector4.textSector.text = resources.getString(R.string.ibadah_hermon)
@@ -86,22 +87,31 @@ class SectorWorshipScheduleActivity : AppCompatActivity() {
             val dataSector1 = NetworkConfig.apiServiceSector.getSectorSion()
 
             CoroutineScope(Dispatchers.Main).launch {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
 
-                binding.bodyScheduleSector1.apply {
+                    bodyScheduleSector1.apply {
 
-                    dataSector1.data?.apply {
-                        textDay.text = tanggal?.let {
-                            FormatDate.getDayInDate(
-                                it,
-                                resources.getString(R.string.formaat_date_internasional)
-                            )
+                        dataSector1.data?.apply {
+                            textDay.text = tanggal?.let {
+                                FormatDate.getDayInDate(
+                                    it,
+                                    resources.getString(R.string.formaat_date_internasional)
+                                )
+                            }
+                            textYear.text = tanggal?.let { FormatDate.changeFormatStringDate(it) }
+                            textSchedule.text = resources.getString(R.string.wita,
+                                waktu?.let { FormatDate.changeFormatTime(it) })
+                            textAddess.text = alamat
+                            textFamily.text = nama_keluarga
                         }
-                        textYear.text = tanggal?.let { FormatDate.changeFormatStringDate(it) }
-                        textSchedule.text = resources.getString(R.string.wita,
-                            waktu?.let { FormatDate.changeFormatTime(it) })
-                        textAddess.text = alamat
-                        textFamily.text = nama_keluarga
+
                     }
+
+                    pbLoading.visibility = View.INVISIBLE
+
+                    grupSectorWorship1.visibility = View.VISIBLE
+
                 }
             }
         }
@@ -113,22 +123,27 @@ class SectorWorshipScheduleActivity : AppCompatActivity() {
             val dataSector2 = NetworkConfig.apiServiceSector.getSectorTorsina()
 
             CoroutineScope(Dispatchers.Main).launch {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
+                    bodyScheduleSector2.apply {
 
-                binding.bodyScheduleSector2.apply {
-
-                    dataSector2.data?.apply {
-                        textDay.text = tanggal?.let {
-                            FormatDate.getDayInDate(
-                                it,
-                                resources.getString(R.string.formaat_date_internasional)
-                            )
+                        dataSector2.data?.apply {
+                            textDay.text = tanggal?.let {
+                                FormatDate.getDayInDate(
+                                    it,
+                                    resources.getString(R.string.formaat_date_internasional)
+                                )
+                            }
+                            textYear.text = tanggal?.let { FormatDate.changeFormatStringDate(it) }
+                            textSchedule.text = resources.getString(R.string.wita,
+                                waktu?.let { FormatDate.changeFormatTime(it) })
+                            textAddess.text = alamat
+                            textFamily.text = nama_keluarga
                         }
-                        textYear.text = tanggal?.let { FormatDate.changeFormatStringDate(it) }
-                        textSchedule.text = resources.getString(R.string.wita,
-                            waktu?.let { FormatDate.changeFormatTime(it) })
-                        textAddess.text = alamat
-                        textFamily.text = nama_keluarga
                     }
+
+                    pbLoading.visibility = View.INVISIBLE
+                    grupSectorWorship2.visibility = View.VISIBLE
                 }
             }
         }
@@ -139,22 +154,27 @@ class SectorWorshipScheduleActivity : AppCompatActivity() {
             val dataSector3 = NetworkConfig.apiServiceSector.getSectorPisga()
 
             CoroutineScope(Dispatchers.Main).launch {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
+                    bodyScheduleSector3.apply {
 
-                binding.bodyScheduleSector3.apply {
-
-                    dataSector3.data?.apply {
-                        textDay.text = tanggal?.let {
-                            FormatDate.getDayInDate(
-                                it,
-                                resources.getString(R.string.formaat_date_internasional)
-                            )
+                        dataSector3.data?.apply {
+                            textDay.text = tanggal?.let {
+                                FormatDate.getDayInDate(
+                                    it,
+                                    resources.getString(R.string.formaat_date_internasional)
+                                )
+                            }
+                            textYear.text = tanggal?.let { FormatDate.changeFormatStringDate(it) }
+                            textSchedule.text = resources.getString(R.string.wita,
+                                waktu?.let { FormatDate.changeFormatTime(it) })
+                            textAddess.text = alamat
+                            textFamily.text = nama_keluarga
                         }
-                        textYear.text = tanggal?.let { FormatDate.changeFormatStringDate(it) }
-                        textSchedule.text = resources.getString(R.string.wita,
-                            waktu?.let { FormatDate.changeFormatTime(it) })
-                        textAddess.text = alamat
-                        textFamily.text = nama_keluarga
                     }
+
+                    pbLoading.visibility = View.INVISIBLE
+                    grupSectorWorship3.visibility = View.VISIBLE
                 }
             }
         }
@@ -166,21 +186,28 @@ class SectorWorshipScheduleActivity : AppCompatActivity() {
 
             CoroutineScope(Dispatchers.Main).launch {
 
-                binding.bodyScheduleSector4.apply {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
 
-                    dataSector4.data?.apply {
-                        textDay.text = tanggal?.let {
-                            FormatDate.getDayInDate(
-                                it,
-                                resources.getString(R.string.formaat_date_internasional)
-                            )
+                    bodyScheduleSector4.apply {
+
+                        dataSector4.data?.apply {
+                            textDay.text = tanggal?.let {
+                                FormatDate.getDayInDate(
+                                    it,
+                                    resources.getString(R.string.formaat_date_internasional)
+                                )
+                            }
+                            textYear.text = tanggal?.let { FormatDate.changeFormatStringDate(it) }
+                            textSchedule.text = resources.getString(R.string.wita,
+                                waktu?.let { FormatDate.changeFormatTime(it) })
+                            textAddess.text = alamat
+                            textFamily.text = nama_keluarga
                         }
-                        textYear.text = tanggal?.let { FormatDate.changeFormatStringDate(it) }
-                        textSchedule.text = resources.getString(R.string.wita,
-                            waktu?.let { FormatDate.changeFormatTime(it) })
-                        textAddess.text = alamat
-                        textFamily.text = nama_keluarga
                     }
+
+                    pbLoading.visibility = View.INVISIBLE
+                    grupSectorWorship4.visibility = View.VISIBLE
                 }
             }
         }

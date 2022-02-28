@@ -2,6 +2,7 @@ package com.example.wartajemaatapp.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wartajemaatapp.R
 import com.example.wartajemaatapp.databinding.ActivitySundaySchoolBinding
@@ -75,21 +76,25 @@ class SundaySchoolActivity : AppCompatActivity() {
             val dataSundaySchool = NetworkConfig.apiServiceMain.getSundaySchool()
 
             CoroutineScope(Dispatchers.Main).launch {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
+                    bodySundaySchool.apply {
 
-                binding.bodySundaySchool.apply {
+                        dataSundaySchool.data?.apply {
+                            itemTeam.textFamily.text = team
+                            itemBesar.textFamily.text = cerita_fa_kls_besar
+                            itemKecil.textFamily.text = cerita_fa_kls_kecil
+                            itemMusic.textFamily.text = pujian
+                            textWorshipSubTitle.text = tanggal?.let {
+                                FormatDate.changeFormatStringDate(
+                                    it
+                                )
+                            }
 
-                    dataSundaySchool.data?.apply {
-                        itemTeam.textFamily.text = team
-                        itemBesar.textFamily.text = cerita_fa_kls_besar
-                        itemKecil.textFamily.text = cerita_fa_kls_kecil
-                        itemMusic.textFamily.text = pujian
-                        textWorshipSubTitle.text = tanggal?.let {
-                            FormatDate.changeFormatStringDate(
-                                it
-                            )
                         }
-
                     }
+                    grupSundaySchool.visibility = View.VISIBLE
+                    pbLoading.visibility = View.INVISIBLE
                 }
             }
         }

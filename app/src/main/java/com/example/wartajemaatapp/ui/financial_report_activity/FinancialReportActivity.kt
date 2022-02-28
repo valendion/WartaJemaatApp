@@ -2,6 +2,7 @@ package com.example.wartajemaatapp.ui.financial_report_activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wartajemaatapp.R
@@ -55,10 +56,15 @@ class FinancialReportActivity : AppCompatActivity() {
         initDate()
 
         initRecylerviewCash()
-        initViewChurchEnter()
-        initViewChurchQuit()
-        initViewChurchResult()
+//        initViewChurchEnter()
+//        initViewChurchQuit()
+//        initViewChurchResult()
+        initChurchBuilding()
+        initFinancialBuilding()
+        initFacilitiesBuilding()
     }
+
+
 
     private fun initPastor() {
         binding.headerFinancialReport.textInfo.text = pastor
@@ -92,6 +98,92 @@ class FinancialReportActivity : AppCompatActivity() {
         }
     }
 
+    private fun initChurchBuilding() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val dataBuildingEnter =
+                NetworkConfig.apiServiceFinancialStatements.getPembangunanMasuk()
+            val dataBuildingQuit =
+                NetworkConfig.apiServiceFinancialStatements.getPembangunanKeluar()
+            val dataBuildingResult =
+                NetworkConfig.apiServiceFinancialStatements.getPembangunanSaldo()
+
+            CoroutineScope(Dispatchers.Main).launch {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
+                    dataBuildingEnter.data.let {
+                        adapterBuildingEnter.updateDataUang(it)
+                    }
+                    dataBuildingQuit.data.let {
+                        adapterBuildingQuit.updateDataUang(it)
+                    }
+
+                    dataBuildingResult.data.let {
+                        adapterBuildingResult.updateDataUang(it)
+                    }
+
+
+                    grupChurchBuilding.visibility = View.VISIBLE
+                    pbLoading.visibility = View.INVISIBLE
+                }
+            }
+        }
+    }
+
+    private fun initFinancialBuilding() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val dataEnter = NetworkConfig.apiServiceFinancialStatements.getJemaatMasuk()
+            val dataQuit = NetworkConfig.apiServiceFinancialStatements.getJemaatKeluar()
+            val dataResult = NetworkConfig.apiServiceFinancialStatements.getJemaatSaldo()
+
+            CoroutineScope(Dispatchers.Main).launch {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
+                    dataEnter.data.let {
+                        adapterCashEnter.updateDataUang(it)
+                    }
+                    dataQuit.data.let {
+                        adapterCashQuit.updateDataUang(it)
+                    }
+
+                    dataResult.data.let {
+                        adapterResult.updateDataUang(it)
+                    }
+
+                    grupChurchTreasury.visibility = View.VISIBLE
+                    pbLoading.visibility = View.INVISIBLE
+                }
+            }
+        }
+    }
+
+    private fun initFacilitiesBuilding() {
+        CoroutineScope(Dispatchers.IO).launch {
+            val dataFacilitiesEnter = NetworkConfig.apiServiceFinancialStatements.getSaranaMasuk()
+            val dataFacilitiesQuit = NetworkConfig.apiServiceFinancialStatements.getSaranaKeluar()
+            val dataFasilitiesResult = NetworkConfig.apiServiceFinancialStatements.getSaranaSaldo()
+
+            CoroutineScope(Dispatchers.Main).launch {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
+                    dataFacilitiesEnter.data.let {
+                        adapterFacilitiesEnter.updateDataUang(it)
+                    }
+                    dataFacilitiesQuit.data.let {
+                        adapterFacilitiesQuit.updateDataUang(it)
+                    }
+
+                    dataFasilitiesResult.data.let {
+                        adapterFacilitiesResult.updateDataUang(it)
+                    }
+
+                    grupChurchFacilities.visibility = View.VISIBLE
+                    pbLoading.visibility = View.INVISIBLE
+                }
+            }
+        }
+    }
+
+
     private fun initViewChurchEnter() {
         CoroutineScope(Dispatchers.IO).launch {
             val dataEnter = NetworkConfig.apiServiceFinancialStatements.getJemaatMasuk()
@@ -110,7 +202,6 @@ class FinancialReportActivity : AppCompatActivity() {
                 dataFacilitiesEnter.data.let {
                     adapterFacilitiesEnter.updateDataUang(it)
                 }
-
             }
         }
     }

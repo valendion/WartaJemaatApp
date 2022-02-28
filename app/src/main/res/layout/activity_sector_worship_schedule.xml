@@ -8,19 +8,32 @@
 
     <include
         android:id="@+id/toolbarSector"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         layout="@layout/toolbar_basic"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <include
         android:id="@+id/headline"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         layout="@layout/headline_pastor"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarSector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/toolbarSector" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:indeterminate="true"
+        android:layout_marginStart="@dimen/distance_16"
+        android:layout_marginEnd="@dimen/distance_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -31,36 +44,65 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-    <include
-        android:id="@+id/bodyScheduleSector1"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        layout="@layout/layout_body_sector_workship_schedule"
-        app:layout_constraintTop_toTopOf="parent"/>
+            <include
+                android:id="@+id/bodyScheduleSector1"
+                layout="@layout/layout_body_sector_workship_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <include
-        android:id="@+id/bodyScheduleSector2"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        layout="@layout/layout_body_sector_workship_schedule"
-        app:layout_constraintTop_toBottomOf="@+id/bodyScheduleSector1"/>
+            <include
+                android:id="@+id/bodyScheduleSector2"
+                layout="@layout/layout_body_sector_workship_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/bodyScheduleSector1" />
 
-    <include
-        android:id="@+id/bodyScheduleSector3"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        layout="@layout/layout_body_sector_workship_schedule"
-        app:layout_constraintTop_toBottomOf="@+id/bodyScheduleSector2"/>
+            <include
+                android:id="@+id/bodyScheduleSector3"
+                layout="@layout/layout_body_sector_workship_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/bodyScheduleSector2" />
 
-    <include
-        android:id="@+id/bodyScheduleSector4"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        layout="@layout/layout_body_sector_workship_schedule"
-        app:layout_constraintTop_toBottomOf="@+id/bodyScheduleSector3"/>
+            <include
+                android:id="@+id/bodyScheduleSector4"
+                layout="@layout/layout_body_sector_workship_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/bodyScheduleSector3" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupSectorWorship1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="bodyScheduleSector1" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupSectorWorship2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="bodyScheduleSector2" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupSectorWorship3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="bodyScheduleSector3" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupSectorWorship4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="bodyScheduleSector4" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

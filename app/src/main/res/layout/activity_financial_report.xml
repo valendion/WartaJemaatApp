@@ -20,6 +20,19 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/toolbarFinancialReport" />
 
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:indeterminate="true"
+        android:layout_marginStart="@dimen/distance_16"
+        android:layout_marginEnd="@dimen/distance_16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -67,8 +80,8 @@
                 android:id="@+id/grupChurchTreasury"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
-                app:constraint_referenced_ids="listChurchTreasuryEnter,listChurchTreasuryQuit,listChurchTreasuryResult" />
+                android:visibility="invisible"
+                app:constraint_referenced_ids="textChurchTreasury,listChurchTreasuryEnter,listChurchTreasuryQuit,listChurchTreasuryResult" />
 
             <!--     Pembangunan Gereja       -->
 
@@ -106,8 +119,8 @@
                 android:id="@+id/grupChurchBuilding"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="visible"
-                app:constraint_referenced_ids="listChurchBuildingEnter,listChurchBuildingQuit,listChurchBuildingResult" />
+                android:visibility="invisible"
+                app:constraint_referenced_ids="textChurchBuilding,listChurchBuildingEnter,listChurchBuildingQuit,listChurchBuildingResult" />
 
 
             <!--    Bidang Sarana dan Pra Sarana        -->
@@ -142,6 +155,13 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@+id/listChurchBuildingQuit"
                 app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupChurchFacilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="textChurchFacilities,listChurchFacilitiesEnter,listChurchFacilitiesQuit,listChurchFacilitiesResult" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

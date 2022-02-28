@@ -55,6 +55,40 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/worshipNightSunday" />
 
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupWorshipMorningSunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="worshipMorningSunday" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupWorshipNightSunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="worshipNightSaturday" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupworshipNightSaturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="worshipNightSunday" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/pbLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:indeterminate="true"
+                android:layout_marginStart="@dimen/distance_16"
+                android:layout_marginEnd="@dimen/distance_16"
+                app:layout_constraintTop_toTopOf="@+id/worshipMorningSunday"
+                app:layout_constraintStart_toStartOf="@+id/worshipMorningSunday"
+                app:layout_constraintEnd_toEndOf="@+id/worshipMorningSunday"
+                app:layout_constraintBottom_toBottomOf="@+id/worshipMorningSunday"/>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>

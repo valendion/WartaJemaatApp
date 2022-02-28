@@ -20,6 +20,14 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/toolbarMain" />
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grupDatePastor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="toolbarMain,headerMain" />
+
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -37,6 +45,26 @@
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/distance_24"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/pbLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:indeterminate="true"
+                android:layout_marginStart="@dimen/distance_16"
+                android:layout_marginEnd="@dimen/distance_16"
+                app:layout_constraintTop_toTopOf="@+id/bodyDevotional"
+                app:layout_constraintStart_toStartOf="@+id/bodyDevotional"
+                app:layout_constraintEnd_toEndOf="@+id/bodyDevotional"
+                app:layout_constraintBottom_toBottomOf="@+id/bodyDevotional"/>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupReflection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="bodyDevotional" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textCongregationalNews"
@@ -57,6 +85,13 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/distance_24"
                 app:layout_constraintTop_toBottomOf="@+id/textCongregationalNews" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="textCongregationalNews, bodyCongregationalNews" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/textAdditionalInfo"
@@ -87,6 +122,13 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:layout_marginBottom="@dimen/distance_16"
                 app:layout_constraintTop_toBottomOf="@+id/bodyInfo" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/grupInfoOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:constraint_referenced_ids="textAdditionalInfo, bodyInfo,bodyInfoBirthday" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

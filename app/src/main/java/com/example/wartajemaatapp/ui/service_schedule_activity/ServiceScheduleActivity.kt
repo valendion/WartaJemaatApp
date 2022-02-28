@@ -2,6 +2,7 @@ package com.example.wartajemaatapp.ui.service_schedule_activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.wartajemaatapp.R
 import com.example.wartajemaatapp.databinding.ActivityServiceScheduleBinding
@@ -43,22 +44,23 @@ class ServiceScheduleActivity : AppCompatActivity() {
         initDate()
     }
 
-    private fun initPastor(){
+    private fun initPastor() {
         binding.headerWorship.textInfo.text = pastor
     }
 
-    private fun initDate(){
+    private fun initDate() {
         binding.toolbarServiceSchedule.apply {
             textDate.text = date
             backArrow.setOnClickListener { backArrow() }
         }
 
     }
-    private fun getDateandName(){
+
+    private fun getDateandName() {
         pref.apply {
             val dateCurrent = getValueString(PREFS_DATE)
             val namePastor = getValueString(PREFS_NAME)
-            date =  resources.getString(
+            date = resources.getString(
                 R.string.current_date,
                 dateCurrent?.let { FormatDate.getDayInDate(it, "dd MMMM yyyy") },
                 dateCurrent
@@ -69,93 +71,105 @@ class ServiceScheduleActivity : AppCompatActivity() {
         }
     }
 
-    private fun backArrow(){
+    private fun backArrow() {
         startActivity(Intent(this, MainActivity::class.java))
         finishAffinity()
     }
 
-    private fun getDataWorshipSundayMorning(){
+    private fun getDataWorshipSundayMorning() {
         CoroutineScope(Dispatchers.IO).launch {
-            //Thanks Giving
+
             val dataSundayMorning = NetworkConfig.apiServiceWorship.getSundayMorning()
 
             CoroutineScope(Dispatchers.Main).launch {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
+                    worshipMorningSunday.apply {
 
-                binding.worshipMorningSunday.apply {
-
-                    dataSundayMorning.data[0]?.apply {
-                        itemWorship.textFamily.text = worship
-                        itemLeader.textFamily.text = leader
-                        itemSinger.textFamily.text = singer
-                        itemMusic.textFamily.text = musik
-                        itemTamborin.textFamily.text = tambourine
-                        itemMixer.textFamily.text = mixer
-                        itemBanners.textFamily.text = banner
-                        itemLCD.textFamily.text = lcd
-                        itemUsher.textFamily.text = usher
-                        itemPraise.textFamily.text = pujian
-                        itemPark.textFamily.text = parkir
+                        dataSundayMorning.data[0]?.apply {
+                            itemWorship.textFamily.text = worship
+                            itemLeader.textFamily.text = leader
+                            itemSinger.textFamily.text = singer
+                            itemMusic.textFamily.text = musik
+                            itemTamborin.textFamily.text = tambourine
+                            itemMixer.textFamily.text = mixer
+                            itemBanners.textFamily.text = banner
+                            itemLCD.textFamily.text = lcd
+                            itemUsher.textFamily.text = usher
+                            itemPraise.textFamily.text = pujian
+                            itemPark.textFamily.text = parkir
+                        }
                     }
+                    pbLoading.visibility = View.INVISIBLE
+                    grupWorshipMorningSunday.visibility = View.VISIBLE
                 }
             }
         }
     }
 
-    private fun getDataWorshipSundayNight(){
+    private fun getDataWorshipSundayNight() {
         CoroutineScope(Dispatchers.IO).launch {
             //Thanks Giving
             val dataSundayNight = NetworkConfig.apiServiceWorship.getSundayNight()
 
             CoroutineScope(Dispatchers.Main).launch {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
+                    worshipNightSunday.apply {
 
-                binding.worshipNightSunday.apply {
-
-                    dataSundayNight.data[0]?.apply {
-                        itemWorship.textFamily.text = worship
-                        itemLeader.textFamily.text = leader
-                        itemSinger.textFamily.text = singer
-                        itemMusic.textFamily.text = musik
-                        itemTamborin.textFamily.text = tambourine
-                        itemMixer.textFamily.text = mixer
-                        itemBanners.textFamily.text = banner
-                        itemLCD.textFamily.text = lcd
-                        itemUsher.textFamily.text = usher
-                        itemPraise.textFamily.text = pujian
-                        itemPark.textFamily.text = parkir
+                        dataSundayNight.data[0]?.apply {
+                            itemWorship.textFamily.text = worship
+                            itemLeader.textFamily.text = leader
+                            itemSinger.textFamily.text = singer
+                            itemMusic.textFamily.text = musik
+                            itemTamborin.textFamily.text = tambourine
+                            itemMixer.textFamily.text = mixer
+                            itemBanners.textFamily.text = banner
+                            itemLCD.textFamily.text = lcd
+                            itemUsher.textFamily.text = usher
+                            itemPraise.textFamily.text = pujian
+                            itemPark.textFamily.text = parkir
+                        }
                     }
+                    pbLoading.visibility = View.INVISIBLE
+                    grupWorshipNightSunday.visibility = View.VISIBLE
                 }
             }
         }
     }
 
-    private fun getDataWorshipSaturday(){
+    private fun getDataWorshipSaturday() {
         CoroutineScope(Dispatchers.IO).launch {
             //Thanks Giving
             val dataSaturdy = NetworkConfig.apiServiceWorship.getSaturday()
 
             CoroutineScope(Dispatchers.Main).launch {
+                binding.apply {
+                    pbLoading.visibility = View.VISIBLE
+                    worshipNightSaturday.apply {
 
-                binding.worshipNightSaturday.apply {
-
-                    dataSaturdy.data[0]?.apply {
-                        itemWorship.textFamily.text = worship
-                        itemLeader.textFamily.text = leader
-                        itemSinger.textFamily.text = singer
-                        itemMusic.textFamily.text = musik
-                        itemTamborin.textFamily.text = tambourine
-                        itemMixer.textFamily.text = mixer
-                        itemBanners.textFamily.text = banner
-                        itemLCD.textFamily.text = lcd
-                        itemUsher.textFamily.text = usher
-                        itemPraise.textFamily.text = pujian
-                        itemPark.textFamily.text = parkir
+                        dataSaturdy.data[0]?.apply {
+                            itemWorship.textFamily.text = worship
+                            itemLeader.textFamily.text = leader
+                            itemSinger.textFamily.text = singer
+                            itemMusic.textFamily.text = musik
+                            itemTamborin.textFamily.text = tambourine
+                            itemMixer.textFamily.text = mixer
+                            itemBanners.textFamily.text = banner
+                            itemLCD.textFamily.text = lcd
+                            itemUsher.textFamily.text = usher
+                            itemPraise.textFamily.text = pujian
+                            itemPark.textFamily.text = parkir
+                        }
                     }
+                    pbLoading.visibility = View.INVISIBLE
+                    grupworshipNightSaturday.visibility = View.VISIBLE
                 }
             }
         }
     }
 
-    private fun initViewSchedule(){
+    private fun initViewSchedule() {
         binding.apply {
 
             worshipMorningSunday.apply {
